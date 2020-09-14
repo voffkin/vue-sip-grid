@@ -8,6 +8,7 @@ yarn add https://github.com/voffkin/vue-sip-grid.git
 main.js
 ```
 import { Row, Column } from 'vue-sip-grid'
+Vue.component('row', Row);
 Vue.component('column', Column);
 ```
 
