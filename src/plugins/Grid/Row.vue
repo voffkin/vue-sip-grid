@@ -1,5 +1,5 @@
 <template>
-  <div class="sip_cont">
+  <div class="sip_cont" :class="classGeneral">
     <slot />
   </div>
 </template>
@@ -9,18 +9,22 @@ export default {
   name: 'Row',
   data() {
     return {
-      // styleGeneral: this.createGutter(this.gutter)
-    };
+      classGeneral: `${this.createClassSize()}`,
+    }
   },
   props: {
+    gutter: Boolean,
     justifyContent: String,
     alignItems: String,
     alignContent: String,
+  },
+  methods: {
+    createClassSize() {
+      let newClass = 'sip_cont ';
+      newClass += this.gutter ? `sip_cont_gutter ` : 'sip_cont_nogutter ';
+
+      return newClass;
+    }
   }
 }
 </script>
-
-<style lang="stylus">
-.sip_cont
-  display flex
-</style>

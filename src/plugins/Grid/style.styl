@@ -1,0 +1,138 @@
+$columns ?= 12
+$column ?= 74px
+$maxWidth ?= 1400px
+$gutter ?= 32px
+$gutterPers = ($gutter / $maxWidth * 100) % // 20 / 1360 * 100
+
+columnPercentNoGutter(num)
+  max-width ((num / $columns) * 100)%
+  width 100%
+
+columnFixedNoGutter(num)
+  max-width ($maxWidth / $columns * num)px
+  width 100%
+
+columnFixedGutter(num)
+  max-width $column * num + $gutter * (num - 1)
+  width 100%
+
+.sip_col_l_1
+  columnPercentNoGutter(1)
+.sip_col_l_2
+  columnPercentNoGutter(2)
+.sip_col_l_3
+  columnPercentNoGutter(3)
+.sip_col_l_4
+  columnPercentNoGutter(4)
+.sip_col_l_5
+  columnPercentNoGutter(5)
+.sip_col_l_6
+  columnPercentNoGutter(6)
+.sip_col_l_7
+  columnPercentNoGutter(7)
+.sip_col_l_8
+  columnPercentNoGutter(8)
+.sip_col_l_9
+  columnPercentNoGutter(9)
+.sip_col_l_10
+  columnPercentNoGutter(10)
+.sip_col_l_11
+  columnPercentNoGutter(11)
+.sip_col_l_12
+  columnPercentNoGutter(12)
+
+.sip_fixed_col_l_1
+  columnFixedNoGutter(1)
+.sip_fixed_col_l_2
+  columnFixedNoGutter(2)
+.sip_fixed_col_l_3
+  columnFixedNoGutter(3)
+.sip_fixed_col_l_4
+  columnFixedNoGutter(4)
+.sip_fixed_col_l_5
+  columnFixedNoGutter(5)
+.sip_fixed_col_l_6
+  columnFixedNoGutter(6)
+.sip_fixed_col_l_7
+  columnFixedNoGutter(7)
+.sip_fixed_col_l_8
+  columnFixedNoGutter(8)
+.sip_fixed_col_l_9
+  columnFixedNoGutter(9)
+.sip_fixed_col_l_10
+  columnFixedNoGutter(10)
+.sip_fixed_col_l_11
+  columnFixedNoGutter(11)
+.sip_fixed_col_l_12
+  columnFixedNoGutter(12)
+
+.sip_col_s_1
+  @media screen and (max-width: 900px)
+    column(1)
+.sip_col_s_2
+  @media screen and (max-width: 900px)
+    column(2)
+.sip_col_s_3
+  @media screen and (max-width: 900px)
+    column(3)
+.sip_col_s_4
+  @media screen and (max-width: 900px)
+    column(4)
+.sip_col_s_5
+  @media screen and (max-width: 900px)
+    column(5)
+.sip_col_s_6
+  @media screen and (max-width: 900px)
+    column(6)
+.sip_col_s_7
+  @media screen and (max-width: 900px)
+    column(7)
+.sip_col_s_8
+  @media screen and (max-width: 900px)
+    column(8)
+.sip_col_s_9
+  @media screen and (max-width: 900px)
+    column(9)
+.sip_col_s_10
+  @media screen and (max-width: 900px)
+    column(10)
+.sip_col_s_11
+  @media screen and (max-width: 900px)
+    column(11)
+.sip_col_s_12
+  @media screen and (max-width: 900px)
+    column(12)
+
+.sip_cont
+  display flex
+
+.sip_cont_gutter
+  .sip_col
+    margin-right $gutter
+    &:last-child
+      margin-right 0
+
+  .sip_fixed_col_l_1
+    columnFixedGutter(1)
+  .sip_fixed_col_l_2
+    columnFixedGutter(2)
+  .sip_fixed_col_l_3
+    columnFixedGutter(3)
+  .sip_fixed_col_l_4
+    columnFixedGutter(4)
+  .sip_fixed_col_l_5
+    columnFixedGutter(5)
+  .sip_fixed_col_l_6
+    columnFixedGutter(6)
+  .sip_fixed_col_l_7
+    columnFixedGutter(7)
+  .sip_fixed_col_l_8
+    columnFixedGutter(8)
+  .sip_fixed_col_l_9
+    columnFixedGutter(9)
+  .sip_fixed_col_l_10
+    columnFixedGutter(10)
+  .sip_fixed_col_l_11
+    columnFixedGutter(11)
+  .sip_fixed_col_l_12
+    columnFixedGutter(12)
