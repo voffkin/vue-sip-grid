@@ -9,11 +9,11 @@ columnPercentNoGutter(num)
   width 100%
 
 columnFixedNoGutter(num)
-  max-width ($maxWidth / $columns * num)px
+  max-width ($maxWidth / $columns * num - 1)px
   width 100%
 
 columnFixedGutter(num)
-  max-width $column * num + $gutter * (num - 1)
+  max-width ($column * num + $gutter * (num - 1) - 1)
   width 100%
 
 .sip_col_l_1
@@ -105,6 +105,7 @@ columnFixedGutter(num)
 
 .sip_cont
   display flex
+  flex-wrap wrap
 
 .sip_cont_gutter
   .sip_col

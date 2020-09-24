@@ -93,6 +93,10 @@
       <column :l="5" fixed>5</column>
       <column :l="2" fixed>2</column>
     </row>
+    <row gutter>
+      <column :l="5" fixed>5</column>
+      <column :l="7" fixed>7</column>
+    </row>
 
     <row gutter>
       <column :l="12" fixed>12</column>
