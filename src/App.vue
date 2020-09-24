@@ -65,6 +65,13 @@
     </row>
 
     <hr>
+    <h3>Percent with gutters</h3>
+
+    <row gutter>
+      <column :l="7">7</column>
+      <column :l="5">5</column>
+    </row>
+
     <h3>Pixcells without gutters</h3>
 
     <column :l="7">

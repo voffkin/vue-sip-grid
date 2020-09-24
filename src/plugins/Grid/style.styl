@@ -4,8 +4,12 @@ $maxWidth ?= 1400px
 $gutter ?= 32px
 $gutterPers = ($gutter / $maxWidth * 100) % // 20 / 1360 * 100
 
-columnPercentNoGutter(num)
+columnPercent(num)
   max-width ((num / $columns) * 100)%
+  width 100%
+
+columnPercentGutter(num)
+  max-width ((num / $columns) * 100)% - $gutterPers * 0.51
   width 100%
 
 columnFixedNoGutter(num)
@@ -17,29 +21,66 @@ columnFixedGutter(num)
   width 100%
 
 .sip_col_l_1
-  columnPercentNoGutter(1)
+  columnPercent(1)
 .sip_col_l_2
-  columnPercentNoGutter(2)
+  columnPercent(2)
 .sip_col_l_3
-  columnPercentNoGutter(3)
+  columnPercent(3)
 .sip_col_l_4
-  columnPercentNoGutter(4)
+  columnPercent(4)
 .sip_col_l_5
-  columnPercentNoGutter(5)
+  columnPercent(5)
 .sip_col_l_6
-  columnPercentNoGutter(6)
+  columnPercent(6)
 .sip_col_l_7
-  columnPercentNoGutter(7)
+  columnPercent(7)
 .sip_col_l_8
-  columnPercentNoGutter(8)
+  columnPercent(8)
 .sip_col_l_9
-  columnPercentNoGutter(9)
+  columnPercent(9)
 .sip_col_l_10
-  columnPercentNoGutter(10)
+  columnPercent(10)
 .sip_col_l_11
-  columnPercentNoGutter(11)
+  columnPercent(11)
 .sip_col_l_12
-  columnPercentNoGutter(12)
+  columnPercent(12)
+
+.sip_cont_gutter
+  .sip_col_l_1
+    columnPercentGutter(1)
+.sip_cont_gutter
+  .sip_col_l_2
+    columnPercentGutter(2)
+.sip_cont_gutter
+  .sip_col_l_3
+    columnPercentGutter(3)
+.sip_cont_gutter
+  .sip_col_l_4
+    columnPercentGutter(4)
+.sip_cont_gutter
+  .sip_col_l_5
+    columnPercentGutter(5)
+.sip_cont_gutter
+  .sip_col_l_6
+    columnPercentGutter(6)
+.sip_cont_gutter
+  .sip_col_l_7
+    columnPercentGutter(7)
+.sip_cont_gutter
+  .sip_col_l_8
+    columnPercentGutter(8)
+.sip_cont_gutter
+  .sip_col_l_9
+    columnPercentGutter(9)
+.sip_cont_gutter
+  .sip_col_l_10
+    columnPercentGutter(10)
+.sip_cont_gutter
+  .sip_col_l_11
+    columnPercentGutter(11)
+.sip_cont_gutter
+  .sip_col_l_12
+    columnPercentGutter(12)
 
 .sip_fixed_col_l_1
   columnFixedNoGutter(1)
